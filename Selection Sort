@@ -1,0 +1,33 @@
+
+class Solution
+{
+	int  select(int arr[], int i)
+	{
+	    int min = arr[i];
+	    int ind = 0;
+        for(int k=i; k< arr.length; k++){
+            if(arr[k]<=min){
+                ind = k;
+                min = arr[k];
+            }
+        }
+        return ind;
+        
+	}
+	
+	
+	void selectionSort(int arr[], int n)
+	{
+	    
+	    for(int j=0; j<=n-2; j++){
+	        
+	        int ind = select(arr,j);
+	        
+	        int temp = arr[j];
+	        arr[j] = arr[ind];
+	        arr[ind] = temp;
+	    }
+        
+        
+	}
+}
