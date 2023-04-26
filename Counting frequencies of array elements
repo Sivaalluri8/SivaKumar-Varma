@@ -1,0 +1,21 @@
+class Solution{
+    //Function to count the frequency of all elements from 1 to N in the array.
+    public static void frequencyCount(int arr[], int N, int P)
+    {
+        
+       int max = Math.max(N,P);
+        
+        
+        
+        
+        int hash[] = new int[max+1];
+        
+        for(int i = 0; i<N; i++){
+            hash[arr[i]]+=1;
+        }
+        
+        for(int i=0; i<N; i++){
+            arr[i] = hash[i+1];
+        }
+    }
+}
